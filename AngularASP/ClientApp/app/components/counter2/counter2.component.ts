@@ -13,4 +13,8 @@ export class Counter2Component {
     public decrementCounter() {
         this.currentCount--;
     }
+    public resetCounter() {
+        this.currentCount = 0;
+
+    }
 }
