@@ -21,11 +21,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\app\components\products\products.component.ts" />
     <None Remove="ClientApp\component.counter2.ts" />
     <None Remove="ClientApp\counter2.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\components\products\products.component.ts" />
     <TypeScriptCompile Include="ClientApp\component.counter2.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\counter2\counter2.component.ts" />
   </ItemGroup>
