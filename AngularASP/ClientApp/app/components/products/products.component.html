@@ -2,9 +2,22 @@
 
 <p>This component demonstrates fetching data from the server. In this case from an json file on an external server</p>
 
-<div class="card">
-    <ng-container *ngFor="let product of data.products">
 
-        <h5>Name: {{product.name}}</h5>
-    </ng-container>
-</div>
+<table class='table' >
+    <thead>
+        <tr>
+            <th>Name</th>           
+            <th>Stock</th>
+            <th>Price</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of data.products">
+
+            <td>{{product.name}}</td>           
+            <td>{{product.stock}}</td>
+            <td>{{product.price}}</td>
+        </tr>
+    </tbody>
+</table>
