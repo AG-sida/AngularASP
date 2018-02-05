@@ -11,6 +11,7 @@ import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { Counter2Component } from './components/counter2/counter2.component';
 import { ProductsComponent } from './components/products/products.component';
+import { PomodoroComponent } from './components/pomodoro/pomodoro.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { ProductsComponent } from './components/products/products.component';
         Counter2Component,
         ProductsComponent,
         FetchDataComponent,
+        PomodoroComponent,
         HomeComponent
     ],
     imports: [
@@ -34,6 +36,7 @@ import { ProductsComponent } from './components/products/products.component';
             { path: 'counter2', component: Counter2Component },
             { path: 'products', component: ProductsComponent },
             { path: 'fetch-data', component: FetchDataComponent },
+            { path: 'pomodoro', component: PomodoroComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]

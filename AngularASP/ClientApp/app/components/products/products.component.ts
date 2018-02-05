@@ -19,7 +19,10 @@ export class ProductsComponent {
     }
 
     getData() {
-        return this.http.get(this.apiUrl).map((res: Response) => res.json())
+       
+        
+            return this.http.get(this.apiUrl).map((res: Response) => res.json())
+       
     }
 
     getContacts() {
@@ -32,4 +35,8 @@ export class ProductsComponent {
 
 
 }
+
+
+
+
 
