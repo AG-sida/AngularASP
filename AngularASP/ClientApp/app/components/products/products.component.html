@@ -1,21 +1,21 @@
 ﻿<h1>Products</h1>
 
-<p>This component demonstrates fetching data from the server. In this case from an json file on an external server</p>
+<p>This component demonstrates fetching data from a remote server. In this case from an json file</p>
 
 
-<table class='table' >
+<table class='table'>
     <thead>
         <tr>
-            <th>Name</th>           
+            <th>Name</th>
             <th>Stock</th>
             <th>Price</th>
-           
+
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let product of data.products">
 
-            <td>{{product.name}}</td>           
+            <td>{{product.name}}</td>
             <td>{{product.stock}}</td>
             <td>{{product.price}}</td>
         </tr>
