@@ -30,7 +30,7 @@ export class PomodoroComponent implements OnInit, OnDestroy {
         this.resetTimer();
         
     }
-    ngOnDestroy() { }
+    
 
     refresh(): void {
        
@@ -39,8 +39,8 @@ export class PomodoroComponent implements OnInit, OnDestroy {
 
     startTimer(): void {
         this.resetTimer(); 
-        setInterval(() => this.tick2(), 6000);
-        setInterval(() => this.tick(), 100);
+        setInterval(() => this.tick2(), 60000);
+        setInterval(() => this.tick(), 1000);
       
     }
     private tick(): void {
@@ -58,7 +58,9 @@ export class PomodoroComponent implements OnInit, OnDestroy {
         }
     }
 
-
+    ngOnDestroy(): void {
+                throw new Error("Method not implemented.");
+            }
    
     }
     //togglePause(): void {
