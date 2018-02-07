@@ -72,12 +72,6 @@ export class PomodoroComponent implements OnInit, OnDestroy {
     //    } 
     //}
 
-    //ngOnDestroy() {
-    //    console.log("Restart...Kom igen nu!");
-    //    this.secondsDisplay = 0;  
-    //  //  this.minutesDisplay = 25;
-       
-    //}
 //}
   
 
