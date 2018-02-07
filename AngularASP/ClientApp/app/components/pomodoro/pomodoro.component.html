@@ -1,5 +1,17 @@
-﻿<h1>Timer</h1>
+﻿<h1>POMODORO</h1>
 
-<p>This is a pending pomodoro timer project .....</p>
+<p>This is a simple example of a Pomodoro timer. Working progress...</p>
 
 
+
+
+<h2>Time: <strong>{{(minutesDisplay) && (minutesDisplay <= 24) ? minutesDisplay : '00'}} : {{(secondsDisplay) && (secondsDisplay <= 59) ? secondsDisplay : '00'}}</strong></h2>
+
+
+<!--<p>Minutes: <strong>{{(minutesDisplay) && (minutesDisplay <= 24) ? minutesDisplay : '00'}}</strong></p>-->
+
+
+<button (click)="startTimer()" class=" btn btn-lg btn-success">Countdown</button>
+<button (click)="pauseTimer2()" class=" btn btn-lg btn-primary">Pause</button>
+<button (click)="resetimer2()" class=" btn btn-lg btn-danger">Reset</button>
+<!--<h1>Time: <strong>{{minuter}}</strong></h1>-->

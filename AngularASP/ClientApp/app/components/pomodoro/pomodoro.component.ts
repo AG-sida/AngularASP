@@ -1,6 +1,6 @@
 ﻿import { Component, OnInit, OnDestroy } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser'
-import { Observable, Subscription } from 'rxjs/Rx'
+import { BrowserModule } from '@angular/platform-browser';
+import { Observable, Subscription } from 'rxjs/Rx';
 
 
 
@@ -11,19 +11,79 @@ import { Observable, Subscription } from 'rxjs/Rx'
 })
 
 export class PomodoroComponent implements OnInit, OnDestroy {
-    ngOnDestroy(): void {
-        throw new Error("Method not implemented.");
+
+    minutesDisplay: number;
+    secondsDisplay: number;
+    isPaused: boolean =false;
+    buttonLabel: string = 'Start';
+
+
+
+    resetTimer(): void {
+
+        this.minutesDisplay = 24;
+        this.secondsDisplay = 59;
     }
-
-    
-
     ngOnInit() {
-
-
-
+        console.log("hej");
+        
+        this.resetTimer();
+        
     }
+    ngOnDestroy() { }
+
+    refresh(): void {
+       
+        window.location.reload();
+    }
+
+    startTimer(): void {
+        this.resetTimer(); 
+        setInterval(() => this.tick2(), 6000);
+        setInterval(() => this.tick(), 100);
+      
+    }
+    private tick(): void {
+        if (this.secondsDisplay == 0 && this.minutesDisplay == 0) { this.refresh(); }
+        else if (--this.secondsDisplay < 0) {
+            this.secondsDisplay = 59;
+
+        }
+    }
+    private tick2(): void {
+        if (this.minutesDisplay == 0) { this.refresh(); }
+        else if (--this.minutesDisplay < 0) {
+            this.minutesDisplay = 24;
+
+        }
+    }
+
+
+   
+    }
+    //togglePause(): void {
+    //    this.resetTimer();
+    //    setInterval(() => this.tick(), 100);
+    //    this.isPaused = !this.isPaused;
+    //    if ( this.secondsDisplay < 0) {
+    //        this.buttonLabel = this.isPaused ? 'Resume' : 'Stop';
+    //    } 
+    //}
+
+    //ngOnDestroy() {
+    //    console.log("Restart...Kom igen nu!");
+    //    this.secondsDisplay = 0;  
+    //  //  this.minutesDisplay = 25;
+       
+    //}
+//}
   
-    }
 
    
 
+
+
+
+
+
+   
