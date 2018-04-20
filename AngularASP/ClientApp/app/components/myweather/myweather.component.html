@@ -1,0 +1,52 @@
+﻿
+<h1>Weather in {{cityName}}</h1>
+
+<p>This component demonstrates fetching data from a remote server. In this case from an json file from https://openweathermap.org/api</p>
+<p>Right now we are displaying only the weather in Stockholm</p>
+<h5>To - do</h5>
+<p>I will add a search functionallity so that the user can choose which city to display information of</p>
+<!--<p *ngIf="!data.weather"><em>Loading...</em></p>-->
+<!--form>
+
+    <input type="text" [(ngModel)]="cityName" />
+    <button (+click)=searchCity()>Search City</button>
+</form>-->
+<!--<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <label for="cityName">City</label>
+    <input ngControl="location" type="text" class="form-control" id="cityName" required />
+    <button type="submit">Search City</button>
+
+</form>-->
+
+
+<form>
+    <input type="text" class="form-control-static"  name="listText" required minlength="4" maxlength="8"   [(ngModel)]="listText" >
+    <br> <br><span>{{ listText }}</span>
+
+    <input type="submit" class="btn" [(ngModel)]="cityName" [value]="btnText" (click)="searchWeatherData(Leo)">
+
+    <!--<div *ngIf="Leo.invalid && (Leo.dirty || Leo.touched)"
+         class="alert alert-danger">
+        <div *ngIf="Leo.errors.required">
+            Name is required
+        </div>
+        <div *ngIf="Leo.errors.minlength">
+            Name must be at least 4 characters long
+        </div>
+    </div>
+    <input type="submit" class="btn"  [(ngModel)]="cityName" [value]="btnText"  (click)="searchWeatherData(Leo)">-->
+</form>
+
+<div>
+    <span class="info">City found:</span>{{cityName}}
+    <span class="info">Humidity:</span>{{cityName.cityHumid}}
+</div>
+
+<!--<input [(ngModel)]="cityName" #ctrl="ngModel">
+
+<p>Value: [{{ cityName }}]</p>
+<p>Valid: {{ ctrl.cityName }}</p>
+
+<button (click)=searchCity()>search city</button>
+
+<h3>Humidity: {{ cityHumid }}</h3>-->
